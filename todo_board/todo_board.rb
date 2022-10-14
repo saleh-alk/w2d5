@@ -2,44 +2,47 @@ require_relative 'list'
 require_relative 'item'
 class TodoBoard
 
-    def initialize(label)
-        @list = List.new(label)
+    def initialize()
+        @list = {} ##List.new(label)
+        #@list[label] = List.new(label)
     end
 
     def get_command
         print "\nEnter a command: "
-        cmd, *args = gets.chomp.split(' ')
+        cmd,li, *args = gets.chomp.split(' ')
 
         case cmd
+        when 'mklist'
+            @list[li] = List.new(li)
         when 'mktodo'
-            @list.add_item(*args)
+            @list[li].add_item(*args)
 
         when 'up'
-            @list.up(*args)
+            @list[li].up(*args)
 
         when 'down'
-            @list.down(*args)
+            @list[li].down(*args)
 
         when 'swap'
-            @list.swap(*args)
+            @list[li].swap(*args)
 
         when 'sort'
-            @list.sort_by_date!
+            @list[li].sort_by_date!
 
         when 'priority'
-            @list.print_priority
+            @list[li].print_priority
 
         when 'print'
-            @list.print
+            @list[li].print
 
         when 'toggle'
-            @list.toggle_index(*args)
+            @list[li].toggle_index(*args)
 
         when 'rm'
-            @list.remove_item(*args)
+            @list[li].remove_item(*args)
 
         when 'purge'
-            @list.purge
+            @list[li].purge
 
         when 'quit'
             return false
