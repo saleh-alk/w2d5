@@ -1,0 +1,94 @@
+/* HTML5 display-role reset for older browsers */
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    background-color: rgb(215, 183, 81);
+}
+
+h1 {
+    font-size: 38px;
+}
+
+h2 {
+    font-size: 32px;
+    margin-left: 15px;
+}
+
+.ingredients-list {
+    list-style: square inside;
+    margin-left: 30px;
+}
+
+.instruction_list {
+    list-style: upper-roman;
+    margin-left: 30px;
+}
+
+
+
+header>img {
+    width: 100px;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+img {
+    margin: 10px;
+}
+
+section {
+    margin-left: 10px;
+}
+
+
+.anchor-list {
+    color: inherit;
+    margin: 20px;
+}
+
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+input[type="radio"] {
+    cursor: pointer;
+    outline: none;
+    vertical-align: bottom;
+    background-image: url(./stars.png);
+}
+
+button:last-child {
+    background-color: gold;
+}
+
+ol li:nth-of-type(2n) {
+    background-color: rgba(32, 33, 30, 0.167);
+}
+
+h2 + .user-review {
+    border-top: px;
+    border-top: solid;
+    border-top: black;
+
+}
+
+input[type="radio"] {
+    -webkit-appearance: none;
+    width: 28px;
+    height: 28px;
+    background-image: url(stars.png);
+    vertical-align: bottom;
+}
+
+input[type="radio"]:hover {
+    background-position: 30px 60px;
+}
+
+input[type="radio"]:checked {
+    background-position: 30px 30px;
+}
