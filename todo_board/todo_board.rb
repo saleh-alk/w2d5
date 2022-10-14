@@ -17,6 +17,9 @@ class TodoBoard
         when 'mktodo'
             @list[li].add_item(*args)
 
+        when 'ls'
+            @list.keys.each{|p| puts p}
+            
         when 'up'
             @list[li].up(*args)
 
